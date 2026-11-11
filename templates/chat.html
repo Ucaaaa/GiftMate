@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}GiftMate · Chat{% endblock %}
+{% block color %}{{ theme.color }}{% endblock %}
+{% block content %}
+<section class="chat-layout">
+  <aside class="chat-aside">
+    <a class="back-link" href="{{ url_for('index') }}">← Beranda</a>
+    <div class="aside-illustration">🎁</div>
+    <span class="eyebrow">GIFT FINDER</span>
+    <h1>Let's find a gift<br><em>they'll love.</em></h1>
+    <p>{{ theme.description }}</p>
+    <div class="aside-tip"><span>✦</span><div><b>Small tip</b><br>Semakin lengkap informasi yang kamu berikan, semakin relevan rekomendasinya.</div></div>
+  </aside>
+  <section class="chat-card">
+    <header class="chat-header">
+      <div class="bot-avatar">🎁</div>
+      <div class="bot-heading"><h2>GiftMate</h2><p><span class="online-dot"></span> Online · Gift assistant</p></div>
+      <label class="learn-toggle"><input type="checkbox" id="learn-mode"> <span>Mode belajar</span></label>
+      <button id="btn-clear" class="clear-btn" type="button" title="Hapus riwayat">↻</button>
+    </header>
+    <div class="chat-context"><span>✦</span> Tanya apa saja seputar ide hadiah. Aku akan bantu satu per satu.</div>
+    <div id="messages" class="messages" aria-live="polite"></div>
+    <div class="suggestions">{% for s in theme.suggestions %}<button type="button" class="chip">{{ s }}</button>{% endfor %}</div>
+    <form id="chat-form" class="chat-form" autocomplete="off">
+      <input id="chat-input" type="text" placeholder="Tulis pesanmu di sini..." maxlength="500" required>
+      <button type="submit" aria-label="Kirim pesan">Kirim <span>↑</span></button>
+    </form>
+    <div class="chat-footnote">GiftMate dapat memberikan estimasi harga. Periksa kembali harga aktual sebelum membeli.</div>
+  </section>
+</section>
+{% endblock %}
+{% block scripts %}
+<script>
+const THEME = {
+  id: {{ theme.id | tojson }},
+  avatar: {{ theme.avatar | tojson }},
+  greeting: {{ theme.greeting | tojson }}
+};
+</script>
+<script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+{% endblock %}

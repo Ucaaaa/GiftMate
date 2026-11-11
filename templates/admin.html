@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Statistik GiftMate{% endblock %}
+{% block content %}
+<section class="admin-page">
+  <a class="back-link" href="{{ url_for('chat_page', theme_id=theme.id) }}">← Kembali ke chat</a>
+  <span class="eyebrow">GIFTmate INSIGHTS</span><h1>Statistik percakapan</h1>
+  <p class="muted">Ringkasan penggunaan GiftMate dan pertanyaan yang belum dikenali. Ambang klasifikasi: {{ threshold }}.</p>
+  <div class="stats-grid">
+    <div class="stat-card"><span>Total pertanyaan</span><strong>{{ summary.total }}</strong></div>
+    <div class="stat-card"><span>Intent dikenali</span><strong>{{ summary.persen_dikenali }}%</strong></div>
+    <div class="stat-card"><span>Belum dikenali</span><strong>{{ summary.tidak_dikenali }}</strong></div>
+    <div class="stat-card"><span>Sesi pengguna</span><strong>{{ summary.sesi }}</strong></div>
+  </div>
+  <h2>Jumlah pertanyaan per intent</h2>
+  <div class="table-wrap"><table><thead><tr><th>Intent</th><th>Jumlah</th></tr></thead><tbody>{% for row in stats %}<tr><td>{{ row.intent }}</td><td>{{ row.jumlah }}</td></tr>{% else %}<tr><td colspan="2">Belum ada data.</td></tr>{% endfor %}</tbody></table></div>
+  <h2>Pertanyaan yang belum dikenali</h2>
+  <div class="table-wrap"><table><thead><tr><th>Pertanyaan</th><th>Skor</th><th>Waktu</th></tr></thead><tbody>{% for row in unknown %}<tr><td>{{ row.text }}</td><td>{{ "%.2f"|format(row.score or 0) }}</td><td>{{ row.created_at }}</td></tr>{% else %}<tr><td colspan="3">Belum ada pertanyaan yang gagal dikenali.</td></tr>{% endfor %}</tbody></table></div>
+</section>
+{% endblock %}

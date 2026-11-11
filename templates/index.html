@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}GiftMate · Temukan hadiah{% endblock %}
+{% block content %}
+<section class="landing">
+  <div class="landing-copy">
+    <span class="eyebrow"><span class="eyebrow-dot"></span> YOUR PERSONAL GIFT ASSISTANT</span>
+    <h1>Hadiah yang tepat,<br><em>lebih mudah ditemukan.</em></h1>
+    <p class="lead">Ceritakan siapa penerimanya, momen spesialnya, budget, dan hal yang mereka sukai. GiftMate bantu merangkai ide yang lebih personal.</p>
+    <a class="primary-btn start-btn" href="{{ url_for('chat_page', theme_id='giftmate') }}">Mulai cari hadiah <span>↗</span></a>
+    <div class="micro-proof"><span>✦</span> Rekomendasi berdasarkan kebutuhanmu, bukan asal pilih.</div>
+  </div>
+  <div class="landing-art" aria-label="Ilustrasi hadiah">
+    <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+    <div class="gift-shadow"></div>
+    <div class="gift-box"><div class="gift-lid"></div><div class="gift-ribbon-v"></div><div class="gift-ribbon-h"></div><div class="gift-bow"></div></div>
+    <div class="floating-note note-one">made with care ✦</div>
+    <div class="floating-note note-two">a little joy</div>
+    <div class="sparkle s1">✳</div><div class="sparkle s2">✦</div><div class="sparkle s3">✧</div>
+  </div>
+</section>
+<section class="how-section">
+  <div><span class="eyebrow">HOW IT WORKS</span><h2>Empat hal. Satu hadiah yang pas.</h2></div>
+  <div class="steps">
+    <article><span>01</span><h3>Penerima</h3><p>Untuk siapa hadiah itu?</p></article>
+    <article><span>02</span><h3>Momen</h3><p>Apa yang sedang dirayakan?</p></article>
+    <article><span>03</span><h3>Budget</h3><p>Berapa anggaranmu?</p></article>
+    <article><span>04</span><h3>Minat</h3><p>Apa yang mereka sukai?</p></article>
+  </div>
+</section>
+{% endblock %}

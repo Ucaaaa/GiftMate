@@ -1,0 +1,485 @@
+{
+  "id": "giftmate",
+  "name": "GiftMate - Rekomendasi Hadiah",
+  "bot_name": "GiftMate",
+  "avatar": "🎁",
+  "color": "#6D5CE8",
+  "description": "Temukan hadiah yang cocok berdasarkan penerima, momen, budget, dan hobi.",
+  "greeting": "Hai! Aku GiftMate 🎁. Aku bisa bantu mencari ide hadiah berdasarkan siapa penerimanya, momen spesialnya, budget, dan hobinya. Ketik 'rekomendasi hadiah' untuk mulai, atau tanyakan tips memilih hadiah.",
+  "suggestions": [
+    "Rekomendasi hadiah",
+    "Hadiah untuk sahabat",
+    "Budget 100 ribu",
+    "Tips memilih hadiah"
+  ],
+  "fallback": [
+    "Maaf, aku belum memahami pertanyaan itu. Kamu bisa bertanya tentang rekomendasi hadiah, budget, penerima, momen, hobi, kategori hadiah, atau tips memilih hadiah.",
+    "Sepertinya pertanyaan itu belum ada di pengetahuanku. Coba gunakan contoh: 'hadiah untuk teman', 'budget 100 ribu', atau 'rekomendasi hadiah'."
+  ],
+  "intents": [
+    {
+      "tag": "salam",
+      "patterns": [
+        "halo",
+        "hai",
+        "hello",
+        "selamat pagi",
+        "selamat siang",
+        "selamat sore",
+        "selamat malam",
+        "assalamualaikum",
+        "permisi",
+        "hei"
+      ],
+      "responses": [
+        "Halo! Selamat datang di GiftMate. Lagi mencari hadiah untuk seseorang?",
+        "Hai! Aku siap bantu menemukan hadiah yang pas."
+      ]
+    },
+    {
+      "tag": "perkenalan_bot",
+      "patterns": [
+        "kamu siapa",
+        "apa itu giftmate",
+        "apa yang bisa kamu lakukan",
+        "fungsi kamu apa",
+        "kenalkan dirimu",
+        "bisa bantu apa"
+      ],
+      "responses": [
+        "Aku GiftMate, chatbot rekomendasi hadiah. Aku membantu memilih ide hadiah berdasarkan penerima, momen, budget, dan hobi."
+      ]
+    },
+    {
+      "tag": "tanya_kategori",
+      "patterns": [
+        "kategori hadiah",
+        "jenis hadiah",
+        "pilihan hadiah apa saja",
+        "ide hadiah apa",
+        "contoh kategori hadiah",
+        "hadiah apa yang tersedia"
+      ],
+      "responses": [
+        "Beberapa kategori hadiah yang bisa dipertimbangkan: personalisasi, alat tulis, buku, aksesori, perawatan diri, makanan, dekorasi, perlengkapan hobi, dan pengalaman seperti tiket aktivitas."
+      ]
+    },
+    {
+      "tag": "input_budget",
+      "patterns": [
+        "budget hadiah",
+        "anggaran hadiah",
+        "budget saya",
+        "harga hadiah",
+        "hadiah di bawah",
+        "hadiah 50000",
+        "hadiah 100 ribu",
+        "budget 100 ribu",
+        "dana untuk hadiah",
+        "berapa harga hadiah"
+      ],
+      "responses": [
+        "Budget membantu mempersempit pilihan. Sebutkan nominal atau rentangnya, misalnya Rp50.000–Rp100.000."
+      ]
+    },
+    {
+      "tag": "pilih_penerima",
+      "patterns": [
+        "hadiah untuk teman",
+        "hadiah untuk sahabat",
+        "hadiah untuk pasangan",
+        "hadiah untuk pacar",
+        "hadiah untuk ibu",
+        "hadiah untuk ayah",
+        "hadiah untuk kakak",
+        "hadiah untuk adik",
+        "hadiah untuk rekan kerja",
+        "siapa penerima hadiah"
+      ],
+      "responses": [
+        "Siapa penerima hadiahnya? Misalnya sahabat, teman, pasangan, orang tua, saudara, atau rekan kerja."
+      ]
+    },
+    {
+      "tag": "pilih_momen",
+      "patterns": [
+        "hadiah ulang tahun",
+        "hadiah wisuda",
+        "hadiah anniversary",
+        "hadiah hari ibu",
+        "hadiah hari ayah",
+        "hadiah pernikahan",
+        "hadiah kelulusan",
+        "hadiah hari raya",
+        "momen pemberian hadiah",
+        "untuk acara apa"
+      ],
+      "responses": [
+        "Untuk momen apa hadiahnya? Contohnya ulang tahun, wisuda, anniversary, pernikahan, atau hari spesial."
+      ]
+    },
+    {
+      "tag": "tanya_hobi",
+      "patterns": [
+        "hobi penerima",
+        "kesukaan penerima",
+        "minat penerima",
+        "suka membaca",
+        "suka memasak",
+        "suka olahraga",
+        "suka musik",
+        "suka fotografi",
+        "suka tanaman",
+        "apa hobinya"
+      ],
+      "responses": [
+        "Apa hobi atau hal yang disukai penerima? Contohnya membaca, musik, olahraga, memasak, fotografi, tanaman, atau skincare."
+      ]
+    },
+    {
+      "tag": "rekomendasi_hadiah",
+      "patterns": [
+        "rekomendasi hadiah",
+        "carikan hadiah",
+        "bantu pilih hadiah",
+        "saran hadiah",
+        "aku mau memberi hadiah",
+        "mencari kado",
+        "ide kado",
+        "pilihkan kado",
+        "hadiah yang cocok"
+      ],
+      "responses": [
+        "Siap! Kita cari hadiah yang cocok. Aku akan menanyakan penerima, momen, budget, dan hobi secara bertahap."
+      ]
+    },
+    {
+      "tag": "tips_hadiah",
+      "patterns": [
+        "tips memilih hadiah",
+        "cara memilih kado",
+        "tips membungkus hadiah",
+        "agar hadiah berkesan",
+        "hadiah yang berkesan",
+        "cara memberi hadiah"
+      ],
+      "responses": [
+        "Pilih hadiah yang relevan dengan kebutuhan atau minat penerima. Sesuaikan dengan budget, pertimbangkan manfaat dan kualitas, lalu tambahkan kartu ucapan personal agar terasa lebih berkesan."
+      ]
+    },
+    {
+      "tag": "terima_kasih",
+      "patterns": [
+        "terima kasih",
+        "makasih",
+        "thanks",
+        "thank you",
+        "oke terima kasih",
+        "makasih banyak"
+      ],
+      "responses": [
+        "Sama-sama! Semoga hadiahnya disukai penerima. 🎁",
+        "Senang bisa membantu. Semoga momen spesialnya makin berkesan!"
+      ]
+    }
+  ],
+  "gift_catalog": [
+    {
+      "name": "Buku novel",
+      "category": "Buku",
+      "min_budget": 50000,
+      "max_budget": 100000,
+      "recipients": [
+        "sahabat",
+        "teman",
+        "pasangan",
+        "saudara"
+      ],
+      "occasions": [
+        "ulang tahun",
+        "wisuda"
+      ],
+      "hobbies": [
+        "membaca"
+      ],
+      "description": "Pilihan personal untuk orang yang suka membaca."
+    },
+    {
+      "name": "Book sleeve",
+      "category": "Aksesori buku",
+      "min_budget": 25000,
+      "max_budget": 75000,
+      "recipients": [
+        "sahabat",
+        "teman",
+        "saudara"
+      ],
+      "occasions": [
+        "ulang tahun",
+        "wisuda"
+      ],
+      "hobbies": [
+        "membaca"
+      ],
+      "description": "Melindungi buku saat dibawa bepergian."
+    },
+    {
+      "name": "Reading journal",
+      "category": "Alat tulis",
+      "min_budget": 35000,
+      "max_budget": 90000,
+      "recipients": [
+        "sahabat",
+        "teman",
+        "pasangan"
+      ],
+      "occasions": [
+        "ulang tahun",
+        "wisuda"
+      ],
+      "hobbies": [
+        "membaca",
+        "menulis"
+      ],
+      "description": "Tempat mencatat daftar dan kesan setelah membaca buku."
+    },
+    {
+      "name": "Tumbler sederhana",
+      "category": "Perlengkapan harian",
+      "min_budget": 40000,
+      "max_budget": 120000,
+      "recipients": [
+        "sahabat",
+        "teman",
+        "pasangan",
+        "rekan kerja",
+        "saudara"
+      ],
+      "occasions": [
+        "ulang tahun",
+        "wisuda",
+        "hari spesial"
+      ],
+      "hobbies": [
+        "olahraga",
+        "aktivitas luar ruang"
+      ],
+      "description": "Hadiah fungsional untuk aktivitas sehari-hari."
+    },
+    {
+      "name": "Lilin aromaterapi",
+      "category": "Relaksasi",
+      "min_budget": 30000,
+      "max_budget": 85000,
+      "recipients": [
+        "sahabat",
+        "pasangan",
+        "ibu"
+      ],
+      "occasions": [
+        "ulang tahun",
+        "anniversary",
+        "hari spesial"
+      ],
+      "hobbies": [
+        "dekorasi",
+        "relaksasi"
+      ],
+      "description": "Cocok untuk penerima yang menyukai suasana santai."
+    },
+    {
+      "name": "Paket alat tulis estetik",
+      "category": "Alat tulis",
+      "min_budget": 25000,
+      "max_budget": 70000,
+      "recipients": [
+        "teman",
+        "sahabat",
+        "saudara"
+      ],
+      "occasions": [
+        "ulang tahun",
+        "wisuda"
+      ],
+      "hobbies": [
+        "menulis",
+        "menggambar",
+        "belajar"
+      ],
+      "description": "Paket praktis untuk mencatat atau berkarya."
+    },
+    {
+      "name": "Mini photo album",
+      "category": "Personalisasi",
+      "min_budget": 35000,
+      "max_budget": 100000,
+      "recipients": [
+        "sahabat",
+        "pasangan",
+        "keluarga"
+      ],
+      "occasions": [
+        "ulang tahun",
+        "anniversary",
+        "wisuda"
+      ],
+      "hobbies": [
+        "fotografi",
+        "kenangan"
+      ],
+      "description": "Album kecil untuk menyimpan foto dan kenangan bersama."
+    },
+    {
+      "name": "Custom keychain",
+      "category": "Personalisasi",
+      "min_budget": 15000,
+      "max_budget": 50000,
+      "recipients": [
+        "teman",
+        "sahabat",
+        "pasangan",
+        "saudara"
+      ],
+      "occasions": [
+        "ulang tahun",
+        "wisuda",
+        "anniversary"
+      ],
+      "hobbies": [
+        "koleksi",
+        "personalisasi"
+      ],
+      "description": "Gantungan kunci dengan nama, inisial, atau ilustrasi khusus."
+    },
+    {
+      "name": "Paket perawatan diri",
+      "category": "Perawatan diri",
+      "min_budget": 50000,
+      "max_budget": 150000,
+      "recipients": [
+        "sahabat",
+        "pasangan",
+        "ibu",
+        "saudara"
+      ],
+      "occasions": [
+        "ulang tahun",
+        "hari spesial"
+      ],
+      "hobbies": [
+        "skincare",
+        "perawatan diri"
+      ],
+      "description": "Pilih produk dasar yang sesuai preferensi dan sensitivitas penerima."
+    },
+    {
+      "name": "Tanaman sukulen mini",
+      "category": "Tanaman",
+      "min_budget": 20000,
+      "max_budget": 60000,
+      "recipients": [
+        "teman",
+        "sahabat",
+        "rekan kerja",
+        "ibu"
+      ],
+      "occasions": [
+        "ulang tahun",
+        "wisuda",
+        "hari spesial"
+      ],
+      "hobbies": [
+        "tanaman",
+        "berkebun"
+      ],
+      "description": "Dekorasi meja yang relatif mudah dirawat."
+    },
+    {
+      "name": "Coffee drip bag set",
+      "category": "Makanan dan minuman",
+      "min_budget": 40000,
+      "max_budget": 100000,
+      "recipients": [
+        "teman",
+        "sahabat",
+        "pasangan",
+        "rekan kerja"
+      ],
+      "occasions": [
+        "ulang tahun",
+        "wisuda",
+        "hari spesial"
+      ],
+      "hobbies": [
+        "kopi",
+        "kuliner"
+      ],
+      "description": "Pilihan untuk penerima yang menikmati kopi."
+    },
+    {
+      "name": "Sketchbook",
+      "category": "Perlengkapan hobi",
+      "min_budget": 30000,
+      "max_budget": 85000,
+      "recipients": [
+        "teman",
+        "sahabat",
+        "saudara"
+      ],
+      "occasions": [
+        "ulang tahun",
+        "wisuda"
+      ],
+      "hobbies": [
+        "menggambar",
+        "seni"
+      ],
+      "description": "Media untuk menuangkan ide dan latihan menggambar."
+    },
+    {
+      "name": "Voucher pengalaman",
+      "category": "Pengalaman",
+      "min_budget": 75000,
+      "max_budget": 250000,
+      "recipients": [
+        "pasangan",
+        "sahabat",
+        "keluarga"
+      ],
+      "occasions": [
+        "ulang tahun",
+        "anniversary",
+        "wisuda"
+      ],
+      "hobbies": [
+        "kuliner",
+        "hiburan",
+        "aktivitas"
+      ],
+      "description": "Voucher aktivitas seperti makan, menonton, atau mencoba kelas singkat."
+    },
+    {
+      "name": "Mug personalisasi",
+      "category": "Personalisasi",
+      "min_budget": 30000,
+      "max_budget": 90000,
+      "recipients": [
+        "teman",
+        "sahabat",
+        "pasangan",
+        "rekan kerja"
+      ],
+      "occasions": [
+        "ulang tahun",
+        "wisuda",
+        "hari spesial"
+      ],
+      "hobbies": [
+        "kopi",
+        "teh",
+        "koleksi"
+      ],
+      "description": "Mug dengan desain atau pesan yang dekat dengan penerima."
+    }
+  ]
+}

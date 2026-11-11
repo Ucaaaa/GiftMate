@@ -1,0 +1,23 @@
+message,expected_intent
+halo,salam
+selamat pagi,salam
+hai giftmate,salam
+kamu siapa,perkenalan_bot
+apa yang bisa kamu lakukan,perkenalan_bot
+kategori hadiah apa saja,tanya_kategori
+jenis hadiah,tanya_kategori
+budget hadiah 100 ribu,input_budget
+anggaran hadiah saya 50000,input_budget
+hadiah untuk sahabat,pilih_penerima
+hadiah untuk pasangan,pilih_penerima
+hadiah ulang tahun,pilih_momen
+hadiah wisuda,pilih_momen
+hobi penerima,tanya_hobi
+suka membaca,tanya_hobi
+rekomendasi hadiah,rekomendasi_hadiah
+bantu pilih hadiah,rekomendasi_hadiah
+tips memilih hadiah,tips_hadiah
+agar hadiah berkesan,tips_hadiah
+terima kasih,terima_kasih
+makasih banyak,terima_kasih
+harga bensin hari ini,
